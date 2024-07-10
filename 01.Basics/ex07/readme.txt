@@ -1,4 +1,4 @@
-ex07: ex00.cra Recofiguration (DIY)
+ex07: ex00.cra Reconfiguration (DIY)
 
 create-react-app 사용하지 말고 '리액트 스타트앱' 직접 설정하고 구성하기  
 
