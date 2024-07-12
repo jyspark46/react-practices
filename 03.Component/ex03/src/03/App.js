@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function App() {
 
-
     return (
         <>
             <h2>ex03 - SyntheticEvent</h2>
@@ -13,11 +12,18 @@ export default function App() {
             <form
                 name='addForm'
                 method='post'
-                action='/do/not/go'>
+                action='/do/not/go'
+                onSubmit={(event) => {
+                    event.preventDefault();
+                    console.log(event.target.name + ' : ' + 'AJAX로 등록할 겁니다.');
+                }}>
                 <input
                     type='text'
                     name='message'
-                    placeholder='메세지를 입력 하세요' />
+                    placeholder='메세지를 입력 하세요'
+                    onChange={(Event) => {
+                        console.log(event.target.names  + " : " + event.target.value);
+                    }} />
                 <br/>
                 <br/>
                 <input
