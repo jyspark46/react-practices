@@ -14,5 +14,9 @@ const StyledH1 = styled.h1`
 `;
 
 export default function (props) {
-  return <StyledH1>CSS in JS: Styled Component</StyledH1>;
+  return (
+    <StyledH1>
+      CSS in JS: Styled Component
+    </StyledH1>
+  );
 }
