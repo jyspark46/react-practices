@@ -1,4 +1,4 @@
-React Practices -  03. Component
+React Practices - 03. Component
 
 ex01: Component 작성 및 Property
 ex02: Component Styling
