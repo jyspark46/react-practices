@@ -82,7 +82,7 @@ export default function App() {
             </Modal>
 
 
-            {/* example modal04: Using inline styles */}
+            {/* example modal05: Using CSS/SASS styles */}
             <button onClick={ () => setModal05IsOpen(true) }>modal05</button>
             <br/><br/>
 
@@ -94,7 +94,7 @@ export default function App() {
                 overlayClassName={styles.Overlay}
                 style={{content: {width: 350}}}
                 contentLabel="modal05 example">
-                <h1>비밀번호입력</h1>
+                <h1>비밀번호 입력</h1>
                 <div>
                     하하하하하하하~
                 </div>
