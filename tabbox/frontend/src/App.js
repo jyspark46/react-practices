@@ -1,12 +1,13 @@
 import React from 'react';
 import TabBox from './TabBox';
-import './assets/css/TabBox.css';
+import './assets/scss/App.scss';
 
 function App(props) {
-
-    return (
-        <TabBox />
-    );
+  return (
+    <div id={'App'}>
+      <TabBox />
+    </div>
+  );
 }
 
 export default App;

@@ -1,25 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Tabs from './Tabs';
 import TabView from './TabView';
+import {Tab_Box} from './assets/scss/TabBox.scss';
+import tabs from './assets/json/data.js';
 
 function TabBox() {
-  const tabs = [
-    { no: 1, name: "메뉴1", active: false, contents: "메뉴 1의 뷰 내용" },
-    { no: 2, name: "메뉴2", active: false, contents: "메뉴 2의 뷰 내용" },
-    { no: 3, name: "메뉴3", active: true, contents: "메뉴 3의 뷰 내용" },
-    { no: 4, name: "메뉴4", active: false, contents: "메뉴 4의 뷰 내용" },
-    { no: 5, name: "메뉴5", active: false, contents: "메뉴 5의 뷰 내용" },
-    { no: 6, name: "메뉴6", active: false, contents: "메뉴 6의 뷰 내용" },
-    { no: 7, name: "메뉴7", active: false, contents: "메뉴 7의 뷰 내용" },
-  ];
+  const [activeIndex, setActiveIndex] = useState(3);
+  const selectTab = function(no) {
+    console.log(no);
+
+    // const index = tabs.map(e => e.no).indexOf(no);
+    // setActiveIndex(index);
+
+    // const index = tabs.findIndex(e => e.no === no);
+    // setActiveIndex(index);
+
+    setActiveIndex(tabs.findIndex(e => e.no === no));
+  };
 
   return (
-    <div className={"tab-box"}>
-        <Tabs tabs={tabs.map(e => {
-          const {contents, ...rest} = e;
-          return rest;
-        })} />
-        <TabView />
+    <div className={Tab_Box}>
+        <Tabs
+          selectTab={selectTab}
+          tabs={tabs.map((e, i) => {
+              const {contents, ...rest} = e;
+          
+              if(i === activeIndex) {
+              rest.active = true;
+              }
+
+              return rest;
+          })}/>
+        <TabView contents={tabs[activeIndex].contents}/>
     </div>
   );
 }
