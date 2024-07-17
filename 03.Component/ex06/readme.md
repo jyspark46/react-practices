@@ -38,7 +38,7 @@ emails.push({});
 3. src/03
 
 ### How IV:
-1. React Addon에 복잡하고 중첩된 객체의 변경을 도와주는 immutablity helper 함수를 사용하는 것이다.
+1. React Addon에 복잡하고 중첩된 객체의 변경을 도와주는 immutability helper 함수를 사용하는 것이다.
 2. add-on 설치
 ```bash
 $ npm i react-addons-update
@@ -56,11 +56,11 @@ const newObject = update(objectInState, { [WHERE] : { [WHAT]: updateValue } });
    - 배열: 업데이트 하고자 하는 요소의 인덱스
 
 5. WHAT Command
-   - $push      * : 배열 요소 추가
-   - $splice
-   - $unshift
-   - $set       * : 객체의 속성 변경 또는 배열의 요소 변경
-   - $merge
-   - $apply
+   - $ push      * : 배열 요소 추가
+   - $ splice
+   - $ unshift
+   - $ set       * : 객체의 속성 변경 또는 배열의 요소 변경
+   - $ merge
+   - $ apply
 
 6. src/04 참고
