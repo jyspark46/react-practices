@@ -56,11 +56,11 @@ const newObject = update(objectInState, { [WHERE] : { [WHAT]: updateValue } });
    - 배열: 업데이트 하고자 하는 요소의 인덱스
 
 5. WHAT Command
-   - $ push      * : 배열 요소 추가
-   - $ splice
-   - $ unshift
-   - $ set       * : 객체의 속성 변경 또는 배열의 요소 변경
-   - $ merge
-   - $ apply
+   - $push      * : 배열 요소 추가
+   - $splice
+   - $unshift
+   - $set       * : 객체의 속성 변경 또는 배열의 요소 변경
+   - $merge
+   - $apply
 
 6. src/04 참고
