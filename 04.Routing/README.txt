@@ -1,7 +1,6 @@
 React Practices - 04.Routing
 
-
-== 실습 ==================
+================== 실습 ==================
 
 1. src/01: React Router Basic I: Implemented in a Simple Way(hashchange event driven)
 2. src/02: React Router Basic II: HTML5 history API
@@ -13,17 +12,12 @@ React Practices - 04.Routing
 8. src/08: Nesting Routes(<Outlet/>)
 
 
-
-== 설치 패키지 ==============
+================== 설치 패키지 ==============
 
 [package 추가] react-router react-router-dom
 $ npm i react-router react-router-dom
 
 
-
-== 테스트 =================
+================== 테스트 =================
 
 $ npm start src=(01|02|03|04|05|06|07)
-
-
-
