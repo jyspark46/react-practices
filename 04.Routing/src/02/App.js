@@ -7,10 +7,6 @@ import Error404 from "./component/Error404";
 export default function App() {
     const [route, setRoute] = useState({page: window.location.href.substring(window.location.href.lastIndexOf("/"))});
 
-    const handlerPopState = (e) => {
-        setRoute(e.state ? e.state : {page: "/"});
-    }
-
     const handleLinkClick = (e) => {
         e.preventDefault();
 
@@ -19,13 +15,16 @@ export default function App() {
         setRoute({page: url});
     }
 
-
     useEffect(() => {
+        const handlerPopState = (e) => {
+            setRoute(e.state ? e.state : {page: "/"});
+        }
+        
         window.addEventListener("popstate", handlerPopState);
         return () => {
             window.removeEventListener("popstate", handlerPopState);
         }
-    });
+    }, []);
 
     return (
         <div>
@@ -48,7 +47,6 @@ export default function App() {
                     }
                 })()           
             }
-
         </div>
     )
 }
